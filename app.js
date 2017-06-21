@@ -1,4 +1,7 @@
 //app.js
+const config = {
+  apiUrl: 'http://test.muse.daigj.com'
+};
 App({
   onLaunch: function () {
     //调用API从本地缓存中获取数据
@@ -6,7 +9,7 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
   },
-  getUserInfo:function(cb){
+  getUserInfo: function(cb){
     var that = this
     if(this.globalData.userInfo){
       typeof cb == "function" && cb(this.globalData.userInfo)
@@ -26,5 +29,6 @@ App({
   },
   globalData:{
     userInfo:null
-  }
+  },
+  config: config
 })
