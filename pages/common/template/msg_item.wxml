@@ -1,5 +1,0 @@
-<template name="msgItem">
-	<view>
-		<text> {{index}}: {{msg}} </text>
-	</view>	
-</template>
